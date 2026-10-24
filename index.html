@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sasae's Productions | Agencia de contenido y producción audiovisual en Bogotá</title>
+<meta name="description" content="Sasae's Productions es la agencia de contenido de Bogotá que convierte la visión de tu marca en redes sociales, producción audiovisual, pauta, branding y páginas web de calidad.">
+<meta name="theme-color" content="#5B1624">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sasae's Productions | Contenido hecho con amor y con método">
+<meta property="og:description" content="Redes sociales, producción audiovisual, pauta, branding y web para marcas con visión de crecimiento. Bogotá, Colombia.">
+<meta property="og:locale" content="es_CO">
+<link rel="icon" type="image/svg+xml" href="assets/cami.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat+Brush&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Sasae's Productions",
+  "description": "Agencia de contenido: redes sociales, producción audiovisual, pauta publicitaria, branding, diseño gráfico y páginas web.",
+  "email": "infosasaes@gmail.com",
+  "telephone": "+573052405576",
+  "areaServed": "CO",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" },
+  "serviceType": ["Redes sociales", "Producción audiovisual", "Pauta publicitaria", "Branding", "Diseño gráfico", "Desarrollo web"]
+}
+</script>
+<style>
+:root{
+  --cream:#F5EDDD; --paper:#FBF6EA; --wine:#5B1624; --wine2:#7A1F30; --red:#E8422A;
+  --blue:#A9BDD8; --navy:#243A5E; --lemon:#F2E7C3; --ink:#1A1A1A;
+  --display:'Bricolage Grotesque','Arial Black',sans-serif;
+  --script:'Caveat Brush','Comic Sans MS',cursive;
+  --body:'DM Sans',system-ui,sans-serif;
+  --pad:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:-.03em}
+.script{font-family:var(--script);font-weight:400;letter-spacing:0}
+.tag{font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.wrap{padding-inline:var(--pad);max-width:1440px;margin-inline:auto}
+
+/* grano sutil */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* preloader */
+#pre{position:fixed;inset:0;z-index:200;background:var(--wine);display:grid;place-items:center;transition:transform .9s cubic-bezier(.8,0,.2,1)}
+#pre.done{transform:translateY(-100%)}
+#pre .box{width:min(560px,78vw);text-align:center}
+#pre img{width:100%;animation:pop 1s cubic-bezier(.2,1.4,.4,1) both}
+#pre .bar{height:6px;border-radius:9px;background:rgba(245,237,221,.18);margin-top:28px;overflow:hidden}
+#pre .bar i{display:block;height:100%;width:0;background:var(--red);animation:load 1.4s ease-out forwards}
+#pre p{color:var(--cream);margin-top:12px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase}
+@keyframes pop{from{opacity:0;transform:scale(.7) rotate(-6deg)}to{opacity:1;transform:none}}
+@keyframes load{to{width:100%}}
+
+/* cursor */
+#dot{position:fixed;left:0;top:0;width:18px;height:18px;border-radius:50%;background:var(--red);pointer-events:none;z-index:150;mix-blend-mode:multiply;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;display:none}
+#dot.big{width:64px;height:64px}
+@media (pointer:fine){#dot{display:block}}
+
+/* nav */
+nav{position:fixed;top:14px;left:var(--pad);right:var(--pad);z-index:80;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.pill{background:var(--wine);border-radius:99px;padding:10px 22px;display:flex;align-items:center}
+.pill img{height:34px;width:auto}
+.menu{display:flex;gap:6px;background:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:6px}
+.menu a{padding:8px 16px;border-radius:99px;font-family:var(--display);font-weight:600;font-size:.92rem;transition:.2s}
+.menu a:hover{background:var(--ink);color:var(--cream)}
+.menu a.cta{background:var(--red);color:var(--paper)}
+.menu a.cta:hover{background:var(--wine)}
+@media(max-width:760px){.menu a:not(.cta){display:none}.pill img{height:26px}}
+
+/* hero */
+.hero{min-height:100svh;padding-top:120px;padding-bottom:70px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.9rem,8.4vw,8rem)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .ln span{display:inline-block;transform:translateY(110%);transition:transform 1s cubic-bezier(.2,.9,.2,1)}
+body.ready .hero h1 .ln span{transform:none}
+body.ready .hero h1 .ln:nth-child(2) span{transition-delay:.12s}
+body.ready .hero h1 .ln:nth-child(3) span{transition-delay:.24s}
+.hl{background:var(--red);color:var(--paper);padding:0 .14em;border-radius:.16em;display:inline-block;transform:rotate(-2deg)}
+.hero .note{position:absolute;font-size:2rem;color:var(--wine);transform:rotate(-8deg)}
+.hero p.lead{max-width:34rem;margin-top:26px;font-size:1.15rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:99px;font-family:var(--display);font-weight:600;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--cream)}
+.btn.solid:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px) rotate(-1deg)}
+.btn.ghost:hover{background:var(--lemon);transform:translateY(-3px) rotate(1deg)}
+.collage{position:relative;aspect-ratio:1/1.05;min-height:420px}
+.collage>*{position:absolute;will-change:transform}
+.c-wine{inset:6% 4% 22% 8%;background:var(--wine);border-radius:34px;display:grid;place-items:center;padding:8%;transform:rotate(-3deg);box-shadow:10px 12px 0 var(--ink)}
+.c-cami{right:-5%;bottom:-8%;width:56%;cursor:pointer}
+.c-blue{left:-3%;top:-3%;width:30%;aspect-ratio:3/4;background:var(--blue);border-radius:22px;transform:rotate(-5deg);border:2px solid var(--ink);display:grid;place-items:center;text-align:center;padding:14px;color:var(--navy)}
+.c-blue b{font-family:var(--display);font-size:1.3rem;display:block;line-height:1}
+.c-blue .script{font-size:1.5rem;display:block;margin-top:8px}
+.c-lemon{left:0;bottom:6%;background:var(--lemon);padding:18px 20px;border-radius:6px;transform:rotate(-6deg);border:2px solid var(--ink);font-family:var(--display);font-weight:600;line-height:1.25;box-shadow:5px 6px 0 var(--ink)}
+.badge{right:-2%;top:-2%;width:30%;aspect-ratio:1;animation:spin 18s linear infinite}
+.badge text{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.06em;fill:var(--ink)}
+.star{right:-2%;top:-2%;width:30%;aspect-ratio:1;display:grid;place-items:center;font-size:2.4rem;color:var(--red)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.collage{max-width:520px;margin:20px auto 0;width:100%}}
+
+/* marquee */
+.band{background:var(--wine);color:var(--cream);transform:rotate(-1.6deg);margin:20px -3vw;padding:20px 0;overflow:hidden;border-block:3px solid var(--ink);position:relative;z-index:2}
+.band.alt{background:var(--blue);color:var(--navy);transform:rotate(1.2deg);margin-top:-6px}
+.band.alt .track em{color:var(--red)}
+.track{display:flex;width:max-content;animation:run 32s linear infinite}
+.band.alt .track{animation-direction:reverse;animation-duration:40s}
+.track span{font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3.4vw,2.8rem);letter-spacing:-.02em;white-space:nowrap;padding-right:1.2em}
+.track em{font-style:normal;color:var(--lemon)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* manifiesto */
+section{position:relative}
+.manifesto{padding:clamp(100px,14vw,200px) 0;background:var(--blue);color:var(--navy);margin-top:-30px;border-radius:48px;position:relative;z-index:1}
+.manifesto .tag{display:inline-block;background:var(--lemon);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:6px 16px;margin-bottom:28px}
+.manifesto p{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.6vw,4.2rem);line-height:1.04;letter-spacing:-.03em;max-width:21em}
+.manifesto p .w{opacity:.28;transition:opacity .3s}
+.manifesto p .w.on{opacity:1}
+.manifesto .sig{font-size:2.2rem;color:var(--wine);margin-top:24px;transform:rotate(-3deg);display:inline-block}
+.manifesto .cami-m{position:absolute;right:var(--pad);bottom:-40px;width:clamp(120px,18vw,240px);transform:rotate(6deg)}
+
+/* servicios */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:46px}
+.sec-head h2{font-size:clamp(2.6rem,7vw,6.2rem)}
+.sec-head .script{font-size:1.8rem;color:var(--red);transform:rotate(-3deg)}
+.services{padding-bottom:clamp(80px,12vw,160px)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{border:2px solid var(--ink);border-radius:30px;padding:28px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .3s}
+.card:hover{transform:translateY(-10px) rotate(-1.5deg);box-shadow:8px 10px 0 var(--ink)}
+.card:nth-child(even):hover{transform:translateY(-10px) rotate(1.5deg)}
+.card .n{font-family:var(--display);font-weight:600;font-size:.95rem;display:flex;justify-content:space-between}
+.card h3{font-size:clamp(1.8rem,2.8vw,2.5rem);margin:30px 0 12px}
+.card p{font-size:1rem;max-width:26em}
+.c1{background:var(--paper)}.c2{background:var(--wine);color:var(--cream)}.c3{background:var(--blue);color:var(--navy)}
+.c4{background:var(--lemon)}.c5{background:var(--red);color:var(--paper)}.c6{background:var(--navy);color:var(--lemon)}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.grid{grid-template-columns:1fr}.card{min-height:260px}}
+
+/* proceso */
+.process{background:var(--navy);color:var(--cream);padding:clamp(80px,11vw,150px) 0;border-radius:48px 48px 0 0}
+.process .sec-head .script{color:var(--lemon)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{border-top:3px solid var(--lemon);padding-top:20px}
+.step b{font-family:var(--display);font-size:clamp(3.5rem,7vw,6rem);font-weight:800;color:transparent;-webkit-text-stroke:2px var(--lemon);line-height:1;display:block;transition:.3s}
+.step:hover b{color:var(--red);-webkit-text-stroke-color:var(--red)}
+.step h3{font-size:1.6rem;margin:14px 0 8px}
+.step p{opacity:.85;font-size:.98rem}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* trabajo */
+/* clientes */
+@media(max-width:700px){.slots{grid-template-columns:repeat(2,1fr)}}
+
+/* contacto */
+.contact{background:var(--wine);color:var(--cream);padding:clamp(80px,11vw,150px) 0;border-radius:48px 48px 0 0;margin-top:-1px;overflow:hidden}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
+.contact h2{font-size:clamp(3.6rem,11vw,10rem)}
+.contact h2 em{font-style:normal;color:var(--red)}
+.contact .script{font-size:2rem;color:var(--lemon);display:block;transform:rotate(-3deg);margin:10px 0 24px}
+.contact .direct{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+.contact .direct a{display:flex;justify-content:space-between;align-items:center;border:2px solid var(--cream);border-radius:99px;padding:14px 22px;font-family:var(--display);font-weight:600;transition:.2s}
+.contact .direct a:hover{background:var(--cream);color:var(--wine);transform:translateX(8px)}
+form{background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:34px;padding:clamp(22px,3vw,38px);box-shadow:10px 12px 0 var(--ink);display:grid;gap:16px;transform:rotate(1deg)}
+form h3{font-size:1.8rem}
+label{display:grid;gap:6px;font-family:var(--display);font-weight:600;font-size:.88rem}
+input,select,textarea{font:inherit;padding:14px 16px;border:2px solid var(--ink);border-radius:16px;background:var(--cream);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--red);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+form .btn{justify-content:center;width:100%;background:var(--red);border-color:var(--ink);color:var(--paper);font-size:1.05rem}
+form .btn:hover{background:var(--wine)}
+form small{opacity:.65;text-align:center}
+@media(max-width:900px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--wine);color:var(--cream);padding:0 0 36px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid rgba(245,237,221,.25);padding-top:28px}
+footer img{height:38px;width:auto}
+footer p{font-size:.9rem;opacity:.8}
+
+
+.c-blue{padding:0!important;overflow:hidden;display:block!important}
+.c-blue img{width:100%;height:100%;object-fit:cover}
+.c-blue .script{position:absolute;left:10px;bottom:6px;color:var(--paper);font-size:1.6rem;text-shadow:0 1px 6px rgba(0,0,0,.45)}
+#lb{position:fixed;inset:0;z-index:250;background:rgba(26,16,20,.88);display:none;place-items:center;padding:4vw}
+#lb.open{display:grid}
+#lb video{max-width:min(1100px,92vw);max-height:82vh;border-radius:20px;border:2px solid var(--cream);background:#000}
+#lb .x{position:absolute;right:3vw;top:3vw;width:48px;height:48px;border-radius:50%;background:var(--paper);color:var(--ink);font-size:1.6rem;line-height:1;border:2px solid var(--ink)}
+
+
+/* carrusel */
+.work{overflow:hidden;padding:clamp(80px,11vw,150px) 0 clamp(60px,8vw,110px);background:var(--blue);color:var(--navy)}
+.work .sec-head .script{color:var(--wine)}
+.car{position:relative;height:clamp(470px,60vw,640px);margin-top:8px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.slide{position:absolute;left:50%;top:14px;width:clamp(230px,27vw,380px);aspect-ratio:4/5;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .6s,filter .6s;will-change:transform;cursor:pointer}
+.slide .card{width:100%;height:100%;background:#fff;border:2px solid var(--ink);border-radius:30px;padding:12px 12px 58px;box-shadow:9px 11px 0 var(--ink);position:relative}
+.slide .media{width:100%;height:100%;border-radius:20px;overflow:hidden;background:var(--navy);position:relative}
+.slide .media img,.slide .media video{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.slide .lbl{position:absolute;left:12px;top:12px;background:var(--paper);color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:4px 14px;font-family:var(--display);font-weight:600;font-size:.8rem;letter-spacing:.03em}
+.slide .play{position:absolute;right:12px;bottom:12px;background:var(--red);color:var(--paper);border:2px solid var(--ink);border-radius:99px;padding:9px 18px;font-family:var(--display);font-weight:600;font-size:.9rem;transition:transform .2s}
+.slide .play:hover{transform:scale(1.08) rotate(-2deg)}
+.slide .cap{position:absolute;left:22px;right:22px;bottom:16px;display:flex;justify-content:space-between;align-items:baseline;font-family:var(--script);font-size:1.45rem;line-height:1;color:var(--ink)}
+.slide .cap .n{font-family:var(--display);font-weight:600;font-size:.85rem;opacity:.5}
+.car-ctrl{display:flex;align-items:center;justify-content:center;gap:22px;margin-top:22px}
+.car-ctrl button{width:52px;height:52px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);font-size:1.3rem;transition:.2s}
+.car-ctrl button:hover{background:var(--ink);color:var(--cream);transform:scale(1.08)}
+.dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:280px}
+.dots i{width:10px;height:10px;border-radius:50%;background:rgba(36,58,94,.3);transition:.3s;cursor:pointer}
+.dots i.on{background:var(--red);width:26px;border-radius:99px}
+@media(max-width:800px){.slide{width:min(66vw,320px)}}
+
+/* marcas */
+.clients{padding:30px 0 clamp(70px,9vw,120px);background:var(--blue);color:var(--navy);overflow:hidden}
+.clients h3{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:28px}
+.logos{overflow:hidden;padding:10px 0 18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ltrack{display:flex;gap:22px;width:max-content;animation:run 36s linear infinite}
+.logos:hover .ltrack{animation-play-state:paused}
+.chip{height:104px;min-width:210px;padding:0 38px;border:2px solid var(--ink);border-radius:26px;background:var(--paper);display:grid;place-items:center;box-shadow:5px 6px 0 var(--ink);transition:transform .3s}
+.chip:hover{transform:translateY(-6px) rotate(-2deg)}
+.chip img{height:44px;width:auto;max-width:170px;object-fit:contain}
+.chip.wine{background:var(--wine)}
+.chip.wine img{height:60px}
+.chip.lemon{background:var(--lemon)}
+.chip .wm{font-family:var(--display);font-weight:800;font-size:1.9rem;letter-spacing:-.04em;color:var(--wine);white-space:nowrap}
+
+/* cami, la camarita */
+[data-cami] svg{width:100%;height:auto;overflow:visible;display:block}
+[data-cami]{cursor:pointer}
+.cami-body{animation:bob 3.4s ease-in-out infinite;transform-origin:130px 202px;transform-box:view-box}
+.cami-arm-r{animation:wave 1.6s ease-in-out infinite;transform-origin:228px 134px;transform-box:view-box}
+.cami-pupil{animation:blink 5s infinite;transform-origin:130px 130px;transform-box:view-box}
+[data-cami]:active .cami-body{animation:none;transform:scale(.94,1.05)}
+@keyframes bob{50%{transform:translateY(-8px) rotate(1.5deg)}}
+@keyframes wave{50%{transform:rotate(-14deg)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.08)}}
+#flash{position:fixed;inset:0;background:#fff;z-index:300;opacity:0;pointer-events:none}
+#flash.go{animation:flash .5s ease-out}
+@keyframes flash{0%{opacity:.95}100%{opacity:0}}
+.cami-say{display:flex;align-items:center;gap:6px;margin-top:34px}
+.cami-say [data-cami]{width:130px;flex:none}
+.cami-say .script{margin:0;color:var(--lemon);transform:rotate(-3deg);font-size:1.7rem;margin-bottom:60px}
+#pre [data-cami]{width:120px;margin:0 auto 22px}
+footer [data-cami]{width:62px}
+footer .brand{display:flex;align-items:center;gap:16px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}.hero h1 .ln span{transform:none}.manifesto p .w{opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div id="pre" aria-hidden="true"><div class="box"><div data-cami></div><img src="assets/logo-white.png" alt=""><div class="bar"><i></i></div><p>Cargando</p></div></div>
+<div id="dot"></div>
+<template id="cami-tpl"><svg viewBox="-6 10 280 220" fill="none" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Cami, la camarita de Sasae's"><ellipse class="cami-shadow" cx="130" cy="214" rx="70" ry="6" fill="#1A1A1A" opacity=".14"/>
+<g class="cami-body">
+<g class="cami-arm-r"><path d="M228 134c22 0 32-16 30-40" stroke="#5B1624" stroke-width="6"/><circle cx="258" cy="88" r="10" fill="#FBF6EA" stroke="#5B1624" stroke-width="3.5"/></g>
+<rect x="66" y="34" width="46" height="28" rx="10" fill="#5B1624"/>
+<circle cx="190" cy="44" r="9" fill="#E8422A"/>
+<rect x="30" y="52" width="200" height="150" rx="46" fill="#FBF6EA" stroke="#5B1624" stroke-width="3.5"/>
+<path d="M30 98V98c0-25 20-46 46-46h108c26 0 46 21 46 46v0z" fill="#5B1624" opacity="0"/>
+<path d="M44 82h172" stroke="#E8422A" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+<circle cx="130" cy="130" r="46" fill="#5B1624"/>
+<circle cx="130" cy="130" r="35" fill="#243A5E"/>
+<circle cx="130" cy="130" r="23" fill="#A9BDD8"/>
+<g class="cami-pm"><g class="cami-pupil"><circle cx="130" cy="130" r="11" fill="#243A5E"/><circle cx="125" cy="125" r="3.6" fill="#FBF6EA"/></g></g>
+<path d="M104 104a36 36 0 0 1 22-12" stroke="#FBF6EA" stroke-width="4" opacity=".55"/>
+<circle cx="62" cy="170" r="10" fill="#E8422A" opacity=".28"/><circle cx="198" cy="170" r="10" fill="#E8422A" opacity=".28"/>
+<path d="M118 184q12 9 24 0" stroke="#5B1624" stroke-width="4"/>
+<path d="M50 28l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#F2E7C3" stroke="#5B1624" stroke-width="2"/>
+</g></svg></template>
+<div id="flash"></div>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Video"><button class="x" type="button" aria-label="Cerrar">×</button><video controls playsinline></video></div>
+
+
+<nav>
+  <a class="pill" href="#top" aria-label="Sasae's Productions, inicio"><img src="assets/logo-white.png" alt="Sasae's Productions"></a>
+  <div class="menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#proceso">Proceso</a>
+    <a class="cta" href="#contacto">Hablemos</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="tag" style="margin-bottom:22px">[001] · Agencia de contenido · Bogotá</p>
+      <h1>
+        <span class="ln"><span>Contenido</span></span>
+        <span class="ln"><span>hecho con <span class="hl">amor</span></span></span>
+        <span class="ln"><span>y con método.</span></span>
+      </h1>
+      <p class="lead">Somos el equipo aliado de marcas, restaurantes y consultorías: estrategia, producción audiovisual y diseño para que tu marca crezca en serio, y se vea increíble haciéndolo.</p>
+      <div class="btns">
+        <a class="btn solid" href="#contacto" data-big>Empezar un proyecto <span>→</span></a>
+        <a class="btn ghost" href="#trabajo" data-big>Ver trabajo</a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="c-wine" data-depth="14"><img src="assets/logo-white.png" alt=""></div>
+      <div class="c-blue" data-depth="-20"><img src="assets/work/cuisine.jpg" alt=""><span class="script">[001]</span></div>
+      <div class="c-lemon" data-depth="26">Reels · Eventos<br>Pauta · Branding<br>Web</div>
+      <svg class="badge" viewBox="0 0 200 200" data-depth="-10"><defs><path id="circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs><text><textPath href="#circ" textLength="470">AGENCIA DE CONTENIDO · BOGOTÁ · AMOR Y MÉTODO ·</textPath></text></svg>
+      <div class="c-cami" data-cami data-depth="18"></div>
+      <div class="star">✺</div>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Redes sociales <em>✺</em> Producción audiovisual <em>✺</em> Pauta <em>✺</em> Branding <em>✺</em> Diseño <em>✺</em> Web <em>✺</em></span>
+  <span>Redes sociales <em>✺</em> Producción audiovisual <em>✺</em> Pauta <em>✺</em> Branding <em>✺</em> Diseño <em>✺</em> Web <em>✺</em></span>
+</div></div>
+<div class="band alt" aria-hidden="true"><div class="track">
+  <span>Con amor y pasión <em>✺</em> Calidad que sorprende <em>✺</em> Entregas rápidas y ordenadas <em>✺</em> Hablemos <em>✺</em></span>
+  <span>Con amor y pasión <em>✺</em> Calidad que sorprende <em>✺</em> Entregas rápidas y ordenadas <em>✺</em> Hablemos <em>✺</em></span>
+</div></div>
+
+<section class="manifesto" id="nosotros">
+  <div class="wrap">
+    <span class="tag rv">[002] Quiénes somos</span>
+    <p id="manifesto">No somos una agencia externa. Somos el equipo aliado que se pone en los zapatos de cada marca, cuida cada detalle y entrega rápido, ordenado y con una calidad que sorprende.</p>
+    <span class="script sig rv">con amor, sasae's ♥</span>
+  </div>
+  <div class="cami-m" data-cami></div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Lo que<br>hacemos</h2><span class="script">seis cosas, una sola cabeza →</span></div>
+    <div class="grid">
+      <article class="card c1 rv"><div class="n"><span>[001]</span><span>✺</span></div><div><h3>Redes sociales</h3><p>Estrategia, contenido y comunidad. Una narrativa que posiciona tu marca, no un calendario por llenar.</p></div></article>
+      <article class="card c2 rv"><div class="n"><span>[002]</span><span>✺</span></div><div><h3>Producción audiovisual</h3><p>Reels, eventos y campañas. Del guion al color, con un estándar visual superior.</p></div></article>
+      <article class="card c3 rv"><div class="n"><span>[003]</span><span>✺</span></div><div><h3>Pauta publicitaria</h3><p>Meta Ads y Google Ads con datos en cada paso, para que cada peso invertido trabaje.</p></div></article>
+      <article class="card c4 rv"><div class="n"><span>[004]</span><span>✺</span></div><div><h3>Branding</h3><p>El universo de tu marca: identidad, tono de voz y un lenguaje visual que dura.</p></div></article>
+      <article class="card c5 rv"><div class="n"><span>[005]</span><span>✺</span></div><div><h3>Diseño gráfico</h3><p>Piezas con intención. Cada diseño dice algo y trabaja para un objetivo.</p></div></article>
+      <article class="card c6 rv"><div class="n"><span>[006]</span><span>✺</span></div><div><h3>Páginas web</h3><p>Tu sitio como un activo que atrae y convierte, no como un folleto en internet.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="proceso">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Cómo<br>trabajamos</h2><span class="script">sin sorpresas feas →</span></div>
+    <div class="steps">
+      <div class="step rv"><b>01</b><h3>Te conocemos</h3><p>Un brief de onboarding para entender tu marca, tu público y lo que quieres lograr, antes de diseñar nada.</p></div>
+      <div class="step rv"><b>02</b><h3>Diseñamos la estrategia</h3><p>Contenido y marca a la medida de tu negocio, con objetivos claros y un plan que se puede medir.</p></div>
+      <div class="step rv"><b>03</b><h3>Producimos y publicamos</h3><p>Guion, grabación, diseño y publicación con tiempos de entrega claros y cuidado en cada detalle.</p></div>
+      <div class="step rv"><b>04</b><h3>Medimos y mejoramos</h3><p>Reuniones de seguimiento para revisar resultados y ajustar el rumbo a tiempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="trabajo">
+  <div class="wrap">
+    <div class="sec-head rv"><h2>Trabajo<br>reciente</h2><span class="script">desliza, mira y dale ▶</span></div>
+  </div>
+  <div class="car" id="car" aria-roledescription="carrusel" aria-label="Trabajo reciente">
+      <article class="slide"><div class="card"><div class="media"><video src="assets/work/venus-loop.mp4" poster="assets/work/venus-poster.jpg" muted loop playsinline preload="metadata"></video><button class="play" type="button" data-video="assets/work/venus-resumen.mp4">▶ Ver video</button><span class="lbl">Producción</span></div><div class="cap"><span>Producción · Venus</span><span class="n">01</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/venus-evento.jpg" alt="Equipo de Venus en su stand durante la Feria Moto Aventura" loading="lazy"><span class="lbl">Evento</span></div><div class="cap"><span>Evento · Venus</span><span class="n">02</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-1.jpg" alt="Stand de Jura en la Feria del Café" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>Stand de Jura</span><span class="n">03</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-2.jpg" alt="Vista general del stand de Jura en Corferias" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>Jura · Corferias</span><span class="n">04</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/cuisine.jpg" alt="Showroom de cocinas de La Cuisine" loading="lazy"><span class="lbl">Fotografía</span></div><div class="cap"><span>La Cuisine</span><span class="n">05</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-3.jpg" alt="Atención en el stand de Jura" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>Jura en vivo</span><span class="n">06</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/sep-1.jpg" alt="Equipo de La Cuisine en su stand de la Feria de Diseño" loading="lazy"><span class="lbl">Feria de Diseño</span></div><div class="cap"><span>La Cuisine</span><span class="n">07</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-4.jpg" alt="Detalle de marca Jura en sobres de azúcar" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>Detalles que suman</span><span class="n">08</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-5.jpg" alt="Preparación de café en una cafetera Jura" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>Café en acción</span><span class="n">09</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/sep-2.jpg" alt="Visitantes en la Feria de Diseño de La Cuisine" loading="lazy"><span class="lbl">Feria de Diseño</span></div><div class="cap"><span>La Cuisine</span><span class="n">10</span></div></div></article>
+      <article class="slide"><div class="card"><div class="media"><img src="assets/work/jura-6.jpg" alt="Café saliendo de una cafetera Jura" loading="lazy"><span class="lbl">Feria del Café</span></div><div class="cap"><span>El primer sorbo</span><span class="n">11</span></div></div></article>
+  </div>
+  <div class="car-ctrl wrap">
+    <button type="button" id="prev" aria-label="Anterior">←</button>
+    <div class="dots" id="dots"></div>
+    <button type="button" id="next" aria-label="Siguiente">→</button>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="wrap"><h3 class="rv">Marcas que confían en nosotros</h3></div>
+  <div class="logos" aria-label="Smeg, Jura, Benito Juárez, Venus y La Cuisine">
+    <div class="ltrack">
+      <div class="chip"><img src="assets/brands/smeg.svg" alt="Smeg"></div>
+      <div class="chip"><img src="assets/brands/jura.svg" alt="Jura"></div>
+      <div class="chip wine"><img src="assets/brands/benito.png" alt="Benito Juárez"></div>
+      <div class="chip"><img src="assets/brands/venus.png" alt="Venus"></div>
+      <div class="chip lemon"><span class="wm">La Cuisine</span></div>
+      <div class="chip"><img src="assets/brands/smeg.svg" alt="Smeg"></div>
+      <div class="chip"><img src="assets/brands/jura.svg" alt="Jura"></div>
+      <div class="chip wine"><img src="assets/brands/benito.png" alt="Benito Juárez"></div>
+      <div class="chip"><img src="assets/brands/venus.png" alt="Venus"></div>
+      <div class="chip lemon"><span class="wm">La Cuisine</span></div>
+      <div class="chip"><img src="assets/brands/smeg.svg" alt="Smeg"></div>
+      <div class="chip"><img src="assets/brands/jura.svg" alt="Jura"></div>
+      <div class="chip wine"><img src="assets/brands/benito.png" alt="Benito Juárez"></div>
+      <div class="chip"><img src="assets/brands/venus.png" alt="Venus"></div>
+      <div class="chip lemon"><span class="wm">La Cuisine</span></div>
+      <div class="chip"><img src="assets/brands/smeg.svg" alt="Smeg"></div>
+      <div class="chip"><img src="assets/brands/jura.svg" alt="Jura"></div>
+      <div class="chip wine"><img src="assets/brands/benito.png" alt="Benito Juárez"></div>
+      <div class="chip"><img src="assets/brands/venus.png" alt="Venus"></div>
+      <div class="chip lemon"><span class="wm">La Cuisine</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div>
+      <h2 class="rv">¿Ha<em>bla</em>mos?</h2>
+      <span class="script rv">cuéntanos tu idea, nosotros la volvemos plan</span>
+      <p class="rv" style="max-width:30em">Escríbenos y te respondemos con lo que necesitamos saber para preparar una propuesta a la medida de tu marca.</p>
+      <div class="direct rv">
+        <a href="https://wa.me/573052405576?text=Hola%20Sasae%27s%2C%20quiero%20saber%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener" data-big>WhatsApp · 305 240 5576 <span>→</span></a>
+        <a href="mailto:infosasaes@gmail.com" data-big>infosasaes@gmail.com <span>→</span></a>
+      </div>
+      <div class="cami-say rv"><div data-cami></div><span class="script">¡clic! escríbenos</span></div>
+    </div>
+    <form id="f" class="rv">
+      <h3>Cuéntanos de tu marca</h3>
+      <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+      <label>Marca o empresa<input name="marca" autocomplete="organization"></label>
+      <label>¿Qué necesitas?
+        <select name="servicio">
+          <option>Redes sociales</option><option>Producción audiovisual</option><option>Pauta publicitaria</option>
+          <option>Branding</option><option>Diseño gráfico</option><option>Página web</option><option>Aún no lo sé, quiero asesoría</option>
+        </select>
+      </label>
+      <label>Mensaje<textarea name="mensaje" placeholder="Cuéntanos qué quieres lograr"></textarea></label>
+      <button class="btn" type="submit" data-big>Enviar por WhatsApp <span>→</span></button>
+      <small>Se abrirá WhatsApp con tu mensaje listo para enviar.</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="assets/logo-white.png" alt="Sasae's Productions"><div data-cami></div></div>
+    <p>© <span id="y"></span> Sasae's Productions · Bogotá, Colombia</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // preloader
+  function ready(){ document.getElementById('pre').classList.add('done'); document.body.classList.add('ready'); }
+  var t = setTimeout(ready, 2200);
+  window.addEventListener('load', function(){ setTimeout(function(){ clearTimeout(t); ready(); }, 1500); });
+
+  // cami: inyectar, ojos que siguen el mouse y flash al hacer clic
+  var tpl = document.getElementById('cami-tpl').innerHTML;
+  var camis = document.querySelectorAll('[data-cami]');
+  camis.forEach(function(el){ el.innerHTML = tpl; });
+  var flash = document.getElementById('flash');
+  camis.forEach(function(el){
+    el.addEventListener('click', function(){
+      flash.classList.remove('go'); void flash.offsetWidth; flash.classList.add('go');
+    });
+  });
+  if(!reduce){
+    addEventListener('mousemove', function(e){
+      camis.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        var dx = e.clientX - (r.left + r.width/2), dy = e.clientY - (r.top + r.height/2);
+        var d = Math.hypot(dx, dy) || 1, k = Math.min(10, d/20);
+        var pm = el.querySelector('.cami-pm');
+        if(pm) pm.style.transform = 'translate('+(dx/d*k)+'px,'+(dy/d*k)+'px)';
+      });
+    });
+  }
+
+  // reveal
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el,i){ el.style.transitionDelay = (i%3)*80+'ms'; io.observe(el); });
+
+  // manifiesto palabra por palabra
+  var m = document.getElementById('manifesto');
+  var words = m.textContent.trim().split(/\s+/);
+  m.innerHTML = words.map(function(w){ return '<span class="w">'+w+'</span>'; }).join(' ');
+  var ws = m.querySelectorAll('.w');
+  function paint(){
+    var r = m.getBoundingClientRect(), vh = innerHeight;
+    var p = Math.min(1, Math.max(0, (vh*0.85 - r.top) / (r.height + vh*0.35)));
+    var n = Math.round(p * ws.length * 1.15);
+    ws.forEach(function(w,i){ w.classList.toggle('on', i < n); });
+  }
+  if(reduce){ ws.forEach(function(w){ w.classList.add('on'); }); } else { addEventListener('scroll', paint, {passive:true}); paint(); }
+
+  // cursor y parallax del collage
+  var dot = document.getElementById('dot');
+  if(matchMedia('(pointer:fine)').matches && !reduce){
+    var cx=0, cy=0, tx=0, ty=0;
+    addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
+    (function loop(){ cx += (tx-cx)*.2; cy += (ty-cy)*.2; dot.style.left=cx+'px'; dot.style.top=cy+'px'; requestAnimationFrame(loop); })();
+    document.querySelectorAll('a,button,[data-big]').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ dot.classList.add('big'); });
+      el.addEventListener('mouseleave', function(){ dot.classList.remove('big'); });
+    });
+    var col = document.querySelector('.collage');
+    var parts = col.querySelectorAll('[data-depth]');
+    addEventListener('mousemove', function(e){
+      var x = (e.clientX/innerWidth - .5), y = (e.clientY/innerHeight - .5);
+      parts.forEach(function(p){ var d = +p.dataset.depth; p.style.translate = (x*d)+'px '+(y*d)+'px'; });
+    });
+  }
+
+  // carrusel
+  var car = document.getElementById('car'), slides = Array.prototype.slice.call(car.querySelectorAll('.slide'));
+  var n = slides.length, cur = 0, timer = null, paused = false;
+  var dots = document.getElementById('dots');
+  slides.forEach(function(_, i){ var d = document.createElement('i'); d.addEventListener('click', function(){ go(i); }); dots.appendChild(d); });
+  function layout(){
+    var narrow = matchMedia('(max-width:800px)').matches, gap = narrow ? 64 : 60;
+    slides.forEach(function(el, i){
+      var d = i - cur; if(d > n/2) d -= n; if(d < -n/2) d += n;
+      var a = Math.abs(d);
+      el.style.transform = 'translateX(calc(-50% + '+(d*gap)+'%)) scale('+(1 - a*0.1)+') rotate('+(d*2.5)+'deg)';
+      el.style.zIndex = 100 - a*10;
+      el.style.opacity = a > 2 ? 0 : 1;
+      el.style.pointerEvents = a > 2 ? 'none' : 'auto';
+      el.style.filter = a === 0 ? 'none' : 'brightness('+(1 - a*0.1)+') saturate(.9)';
+      var v = el.querySelector('video');
+      if(v){ if(a === 0 && !reduce){ var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); } else { v.pause(); } }
+    });
+    dots.querySelectorAll('i').forEach(function(d,i){ d.classList.toggle('on', i === cur); });
+  }
+  function go(i){ cur = (i + n) % n; layout(); }
+  function start(){ stop(); if(reduce) return; timer = setInterval(function(){ if(!paused) go(cur+1); }, 3400); }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  document.getElementById('prev').addEventListener('click', function(){ go(cur-1); start(); });
+  document.getElementById('next').addEventListener('click', function(){ go(cur+1); start(); });
+  car.addEventListener('mouseenter', function(){ paused = true; });
+  car.addEventListener('mouseleave', function(){ paused = false; });
+  addEventListener('keydown', function(e){ var r = car.getBoundingClientRect(); if(r.top < innerHeight && r.bottom > 0){ if(e.key === 'ArrowRight') go(cur+1); if(e.key === 'ArrowLeft') go(cur-1); } });
+  var sx = 0, dx = 0, down = false, target = null;
+  car.addEventListener('pointerdown', function(e){ down = true; sx = e.clientX; dx = 0; target = e.target.closest('.slide'); paused = true; });
+  car.addEventListener('pointermove', function(e){ if(down) dx = e.clientX - sx; });
+  function up(){
+    if(!down) return; down = false; paused = false;
+    if(Math.abs(dx) > 50){ go(cur + (dx < 0 ? 1 : -1)); start(); }
+    else if(Math.abs(dx) < 6 && target){ var i = slides.indexOf(target); if(i > -1 && i !== cur){ go(i); start(); } }
+  }
+  car.addEventListener('pointerup', up); car.addEventListener('pointercancel', up);
+  new IntersectionObserver(function(es){ paused = !es[0].isIntersecting; },{threshold:.2}).observe(car);
+  layout(); start();
+  addEventListener('resize', layout);
+
+  // visor de video
+  var lb = document.getElementById('lb'), lbv = lb.querySelector('video');
+  function closeLb(){ lb.classList.remove('open'); lbv.pause(); lbv.removeAttribute('src'); lbv.load(); }
+  document.querySelectorAll('[data-video]').forEach(function(b){
+    if(!b.classList.contains('play')) return;
+    b.addEventListener('pointerdown', function(e){ e.stopPropagation(); });
+    b.addEventListener('click', function(){ lbv.src = b.dataset.video; lb.classList.add('open'); lbv.play(); });
+  });
+  lb.querySelector('.x').addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLb(); });
+  addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLb(); });
+
+  // formulario -> WhatsApp
+  document.getElementById('f').addEventListener('submit', function(e){
+    e.preventDefault();
+    var d = new FormData(e.target);
+    var msg = 'Hola Sasae\'s, soy ' + d.get('nombre') + (d.get('marca') ? ' de ' + d.get('marca') : '') +
+      '. Me interesa: ' + d.get('servicio') + '.' + (d.get('mensaje') ? ' ' + d.get('mensaje') : '');
+    window.open('https://wa.me/573052405576?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>

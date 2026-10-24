@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+.env
+.env.*
+*.pem
+*.key
+*.log
+node_modules/
